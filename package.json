@@ -1,0 +1,34 @@
+{
+  "name": "scrape-test",
+  "version": "0.0.1",
+  "description": "Scraper test",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgoloviznin/scrape-test.git"
+  },
+  "author": "Vsevolod Goloviznin <vsevolod.goloviznin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vgoloviznin/scrape-test/issues"
+  },
+  "homepage": "https://github.com/vgoloviznin/scrape-test#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/koa": "^2.11.6",
+    "@types/koa-ejs": "^4.2.2",
+    "axios": "^0.21.0",
+    "koa": "^2.13.0",
+    "koa-ejs": "^4.3.0",
+    "puppeteer": "^5.4.1"
+  }
+}
