@@ -13,3 +13,14 @@ interface IReqResResponse {
   total_pages: number;
   data: IUserObject[]
 }
+
+interface IAffluentData {
+  date: string;
+  total_commission: string;
+  net_sales: number;
+  net_leads: number;
+  clicks: number;
+  epc: string;
+  impressions: number;
+  cr: string;
+}

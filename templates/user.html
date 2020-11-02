@@ -1,8 +1,18 @@
-<ul>
-  <% users.forEach(function (user) {%>
-  <li><%= user.id %></li>
-  <li><%= user.email %></li>
-  <li><%= user.first_name %></li>
-  <li><%= user.last_name %></li>
-  <% })%>
-</ul>
+<table>
+  <thead>
+    <tr>ID</tr>
+    <tr>Email</tr>
+    <tr>First Name</tr>
+    <tr>Last Name</tr>
+  </thead>
+  <tbody>
+    <% users.forEach(function (user) {%>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+    </tr>
+    <% })%>
+  </tbody>
+</table>

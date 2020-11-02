@@ -3,6 +3,7 @@ import Koa from 'koa';
 import render from 'koa-ejs';
 
 import ReqResService from './services/req-res';
+import AffluentService from './services/affluent';
 
 const app = new Koa();
 
@@ -14,11 +15,16 @@ render(app, {
   debug: false,
 });
 
-app.use(async function (ctx) {
+app.use(async (ctx) => {
+  await AffluentService.scrape();
+
   const users = await ReqResService.scrape();
 
+  const affluent = await AffluentService.scrape();
+
   await ctx.render('content', {
-    users
+    users,
+    affluent,
   });
 });
 

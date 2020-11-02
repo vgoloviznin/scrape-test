@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>Date</tr>
+    <tr>Total Commission</tr>
+    <tr>Net Sales</tr>
+    <tr>Net Leads</tr>
+    <tr>Clicks</tr>
+    <tr>EPC</tr>
+    <tr>Impressions</tr>
+    <tr>CR</tr>
+  </thead>
+  <tbody>
+    <% affluent.forEach(function (data) {%>
+    <tr>
+      <td><%= data.date %></td>
+      <td><%= data.total_commission %></td>
+      <td><%= data.net_sales %></td>
+      <td><%= data.net_leads %></td>
+      <td><%= data.clicks %></td>
+      <td><%= data.epc %></td>
+      <td><%= data.impressions %></td>
+      <td><%= data.cr %></td>
+    </tr>
+    <% })%>
+  </tbody>
+</table>
