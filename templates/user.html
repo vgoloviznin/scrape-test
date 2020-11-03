@@ -1,9 +1,12 @@
-<table>
+<table class="pure-table pure-table-bordered">
   <thead>
-    <tr>ID</tr>
-    <tr>Email</tr>
-    <tr>First Name</tr>
-    <tr>Last Name</tr>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Avatar</th>
+    </tr>
   </thead>
   <tbody>
     <% users.forEach(function (user) {%>
@@ -12,6 +15,7 @@
       <td><%= user.email %></td>
       <td><%= user.first_name %></td>
       <td><%= user.last_name %></td>
+      <td><%= user.avatar %></td>
     </tr>
     <% })%>
   </tbody>

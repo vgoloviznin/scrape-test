@@ -2,8 +2,7 @@ import path from 'path';
 import Koa from 'koa';
 import render from 'koa-ejs';
 
-import ReqResService from './services/req-res';
-import AffluentService from './services/affluent';
+import router from './routes';
 
 const app = new Koa();
 
@@ -15,23 +14,13 @@ render(app, {
   debug: false,
 });
 
-app.use(async (ctx) => {
-  await AffluentService.scrape();
-
-  const users = await ReqResService.scrape();
-
-  const affluent = await AffluentService.scrape();
-
-  await ctx.render('content', {
-    users,
-    affluent,
-  });
-});
+app.use(router.routes());
 
 app.on('error', (err) => {
   console.error(err);
 });
 
-app.listen(3000, () => {
-  console.log('Server ready at http://localhost:3000');
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}`);
 });
