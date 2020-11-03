@@ -6,7 +6,9 @@
 
 2. Run `npm i` to install dependencies
 
-3. If you're using VS Code, you can use the following structure to run and compile the prject
+## Running
+
+1. If you're using VS Code, you can use the following structure to run and compile the prject
 
 ```
 {
@@ -32,9 +34,9 @@
     }
 ```
 
-4. If not using VS Code, you need to comple TS files by running `./node_modules/.bin/tsc --project tsconfig.json` then start the app by running `AFFLUENT_USERNAME=name AFFLUENT_PASSWORD=password DB_HOST=host DB_NAME=name DB_USER=user DB_PASSWORD=password node ./dist/app`
+2. If not using VS Code, you need to comple TS files by running `./node_modules/.bin/tsc --project tsconfig.json` then start the app by running `AFFLUENT_USERNAME=name AFFLUENT_PASSWORD=password DB_HOST=host DB_NAME=name DB_USER=user DB_PASSWORD=password node ./dist/app`
 
-5. Routes
+## API
 
 GET */* will render the home page with data available in the DB
 GET */reload* wll re-insert the data in the DB and redirect to the home page
