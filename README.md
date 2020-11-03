@@ -38,5 +38,5 @@
 
 ## API
 
-GET */* will render the home page with data available in the DB
-GET */reload* wll re-insert the data in the DB and redirect to the home page
+- GET **/** will render the home page with data available in the DB
+- GET **/reload** wll re-insert the data in the DB and redirect to the home page
