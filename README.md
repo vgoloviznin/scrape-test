@@ -34,7 +34,7 @@
     }
 ```
 
-2. If not using VS Code, you need to comple TS files by running `./node_modules/.bin/tsc --project tsconfig.json` then start the app by running `AFFLUENT_USERNAME=name AFFLUENT_PASSWORD=password DB_HOST=host DB_NAME=name DB_USER=user DB_PASSWORD=password node ./dist/app`
+2. If not using VS Code, you need to comple TS files by running `./node_modules/.bin/tsc --project tsconfig.json` then start the app by running `AFFLUENT_USERNAME=name AFFLUENT_PASSWORD=password DB_HOST=host DB_NAME=name DB_USER=user DB_PASSWORD=password node ./dist/src/app`
 
 3. Run tests by executing `npm run test`
 
