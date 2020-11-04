@@ -40,5 +40,7 @@
 
 ## API
 
-- GET **/** will render the home page with data available in the DB
-- GET **/reload** wll re-insert the data in the DB and redirect to the home page
+- GET **/** renders the home page with tabulated data
+- GET **/users** returns array of users
+- GET **/affluent** returns array of affluent data
+- GET **/reload** re-inserts the data in the DB and redirect to the home page
