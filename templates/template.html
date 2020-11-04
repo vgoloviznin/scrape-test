@@ -5,13 +5,47 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link href="https://unpkg.com/tabulator-tables@4.8.4/dist/css/tabulator.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.8.4/dist/js/tabulator.min.js"></script>
+    
   <style>
     .center {
-          padding-left: 2em;
-          padding-right: 2em;
+      padding-left: 2em;
+      padding-right: 2em;
     }
   </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Tabulator('#user-data', {
+        ajaxURL: '/users',
+        layout: "fitColumns",
+        columns: [
+          { title: 'id', field: 'id' },
+          { title: 'first_name', field: 'first_name' },
+          { title: 'last_name', field: 'last_name' },
+          { title: 'email', field: 'email' },
+          { title: 'avatar', field: 'avatar' },
+        ]
+      });
+
+      new Tabulator('#affluent-data', {
+        ajaxURL: '/affluent',
+        layout: "fitColumns",
+        columns: [
+          { title: 'date', field: 'date' },
+          { title: 'total_commission', field: 'total_commission', headerSort: false },
+          { title: 'net_sales', field: 'net_sales' },
+          { title: 'net_leads', field: 'net_leads' },
+          { title: 'clicks', field: 'clicks' },
+          { title: 'epc', field: 'epc', headerSort: false },
+          { title: 'impressions', field: 'impressions' },
+          { title: 'cr', field: 'cr', headerSort: false },
+        ]
+      });
+    });
+  </script>
 </head>
 
 <body class="center">
